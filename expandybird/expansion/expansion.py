@@ -134,7 +134,8 @@ def _ProcessResource(resource, imports, env, validate_schema=False):
   config = {'resources': []}
   # Initialize layout with basic resource information.
   layout = {'name': resource['name'],
-            'type': resource['type']}
+            'type': resource['type'],
+            'properties': None}
 
   if IsTemplate(resource['type']) and resource['type'] in imports:
     # A template resource, which contains sub-resources.
