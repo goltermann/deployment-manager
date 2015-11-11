@@ -44,7 +44,7 @@ Follow these 3 steps to install DM:
 1. Make sure your Kubernetes cluster is up and running, and that you can run
 `kubectl` commands against it.
 1. Clone this repository into the src folder of your GOPATH, if you haven't already.
-See the [Kubernetes docs](https://github.com/kubernetes/kubernetes/blob/master/docs/devel/development.md)
+See the [Kubernetes docs](kubernetes/blob/master/docs/devel/development.md)
 for how to setup Go and the repos.
 1. Use `kubectl` to install DM into your cluster:
 
