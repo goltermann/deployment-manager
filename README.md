@@ -8,7 +8,8 @@ You can use it deploy ready-to-use types, such as:
 * [Replicated Service](types/replicatedservice/v1)
 * [Redis](types/redis/v1)
 
-Types live in ordinary Github repositories. This repository is a DM type registry.
+Types live in ordinary Github repositories. This repository contains the DM
+code, but also acts as a DM type registry.
 
 You can also use DM to deploy simple templates that use types, such as:
 
@@ -43,6 +44,8 @@ Follow these 3 steps to install DM:
 1. Make sure your Kubernetes cluster is up and running, and that you can run
 `kubectl` commands against it.
 1. Clone this repository into the src folder of your GOPATH, if you haven't already.
+See the [Kubernetes docs](https://github.com/kubernetes/kubernetes/blob/master/docs/devel/development.md)
+for how to setup Go and the repos.
 1. Use `kubectl` to install DM into your cluster:
 
 ```
@@ -72,7 +75,10 @@ as the default service address for DM.
 
 ## Using Deployment Manager
 
-You can use `dm` to deploy a type from the command line. This command deploys a
+You can use `dm` to deploy a type from the command line. You will need to first
+build it by running `make` from the deployment-manager repo.
+
+This command deploys a
 redis cluster with two workers from the type definition in this repository:
 
 ```
