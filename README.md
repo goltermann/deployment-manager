@@ -44,7 +44,7 @@ Follow these 3 steps to install DM:
 1. Make sure your Kubernetes cluster is up and running, and that you can run
 `kubectl` commands against it.
 1. Clone this repository into the src folder of your GOPATH, if you haven't already.
-See the [Kubernetes docs](kubernetes/blob/master/docs/devel/development.md)
+See the [Kubernetes docs](https://github.com/kubernetes/kubernetes/blob/master/docs/devel/development.md)
 for how to setup Go and the repos.
 1. Use `kubectl` to install DM into your cluster:
 
@@ -75,8 +75,13 @@ as the default service address for DM.
 
 ## Using Deployment Manager
 
-You can use `dm` to deploy a type from the command line. You will need to first
-build it by running `make` from the deployment-manager repo.
+You can use `dm` to deploy a type from the command line:
+
+1. You will need to first build it by running `make` from the deployment-manager
+repo.
+1. You should also ensure you've run the `kubectl proxy` command from the
+section above so that the `dm` commandline tool can reach the DM service in your
+Kubernetes cluster.
 
 This command deploys a
 redis cluster with two workers from the type definition in this repository:
