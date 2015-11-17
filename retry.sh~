@@ -1,0 +1,5 @@
+kubectl delete -f install-custom.yaml
+make push
+kubectl create -f install-custom.yaml
+kubectl get po
+dm list
